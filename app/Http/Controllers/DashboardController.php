@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 class DashboardController extends Controller
 {
@@ -12,10 +13,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $user = Auth::user(); // Get the authenticated user
-
-        return view('dashboard', [
-            'user' => $user,
-        ]);
+        $posts = Post::with(['user', 'likes', 'comments.user'])->latest()->get();
+        $sharedPosts = auth()->user()->sharedPosts()->with(['user', 'likes', 'comments.user'])->latest()->get();
+        return view('dashboard', compact('posts', 'sharedPosts'));
     }
 }
