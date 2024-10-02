@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard</title>
     <style>
+<<<<<<< HEAD
         :root {
             --night-bg: #0f172a;  /* Very dark blue, almost black */
             --night-text: #e2e8f0;  /* Light gray for main text */
@@ -20,6 +21,14 @@
             margin: 0;
             padding: 0;
             color: var(--night-text);
+=======
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
         .container {
             max-width: 1200px;
@@ -27,7 +36,11 @@
             padding: 20px;
         }
         header {
+<<<<<<< HEAD
             background-color: var(--night-secondary);
+=======
+            background-color: #ffffff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 15px 0;
         }
@@ -40,17 +53,26 @@
             align-items: center;
         }
         nav ul li a {
+<<<<<<< HEAD
             color: var(--night-text);
+=======
+            color: #333;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
+<<<<<<< HEAD
             color: var(--night-accent);
+=======
+            color: #007bff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
         .profile-header {
             position: relative;
             margin-bottom: 80px;
+<<<<<<< HEAD
         }
         .background-picture {
             width: 100%;
@@ -97,6 +119,53 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-top: 20px;
         }
+=======
+        }
+        .background-picture {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 0 0 8px 8px;
+        }
+        .profile-pic-container {
+            position: absolute;
+            bottom: -60px;
+            left: 30px;
+            z-index: 1;
+        }
+        .profile-pic {
+            width: 168px;
+            height: 168px;
+            border-radius: 50%;
+            border: 6px solid #ffffff;
+            object-fit: cover;
+        }
+        .edit-button {
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            background-color: #ffffff;
+            color: #1877f2;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Add this line to remove underline */
+            display: inline-block; /* Add this line for proper padding */
+        }
+        .edit-button:hover {
+            background-color: #f0f2f5;
+        }
+        .user-info {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         .user-name {
             font-size: 2rem;
             font-weight: 700;
@@ -107,7 +176,11 @@
             margin-bottom: 20px;
         }
         .post-form {
+<<<<<<< HEAD
             background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -119,12 +192,19 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             resize: vertical;
+<<<<<<< HEAD
             background-color: var(--night-bg);
             color: var(--night-text);
         }
         .post-form button {
             background-color: var(--night-accent);
             color: var(--night-bg);
+=======
+        }
+        .post-form button {
+            background-color: #1877f2;
+            color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
@@ -135,7 +215,11 @@
             margin-top: 20px;
         }
         .post {
+<<<<<<< HEAD
             background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -150,18 +234,32 @@
         .like-button {
             background: none;
             border: none;
+<<<<<<< HEAD
             color: var(--night-accent);
+=======
+            color: #1877f2;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             cursor: pointer;
             font-size: 14px;
             padding: 5px 10px;
             margin-top: 10px;
         }
         .like-button.liked {
+<<<<<<< HEAD
             color: red;
         }
         .share-button {
             background-color: #42b72a;
             color: var(--night-bg);
+=======
+            color: #fff;
+            background-color: #1877f2;
+            border-radius: 4px;
+        }
+        .share-button {
+            background-color: #42b72a;
+            color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -177,12 +275,19 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             resize: vertical;
+<<<<<<< HEAD
             background-color: var(--night-bg);
             color: var(--night-text);
         }
         .comment-form button {
             background-color: var(--night-accent);
             color: var(--night-bg);
+=======
+        }
+        .comment-form button {
+            background-color: #1877f2;
+            color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -193,7 +298,11 @@
             margin-top: 10px;
         }
         .comment {
+<<<<<<< HEAD
             background-color: var(--night-bg);
+=======
+            background-color: #f0f2f5;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 10px;
@@ -212,7 +321,11 @@
         }
         .delete-button {
             background-color: #dc3545;
+<<<<<<< HEAD
             color: var(--night-bg);
+=======
+            color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -227,7 +340,11 @@
             max-height: 500px; /* Adjust this value as needed */
             overflow: hidden;
             border-radius: 15px;
+<<<<<<< HEAD
             background-color: var(--night-bg); /* Light gray background for images */
+=======
+            background-color: #f8f9fa; /* Light gray background for images */
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             display: flex;
             justify-content: center;
             align-items: center;
@@ -298,7 +415,11 @@
             height: 40px;
             object-fit: cover;
             border-radius: 50%;
+<<<<<<< HEAD
             border: 2px solid var(--night-bg);
+=======
+            border: 2px solid #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
@@ -314,7 +435,11 @@
             height: 10px;
             border-radius: 50%;
             background-color: #4CAF50; /* Green dot for 'online' status */
+<<<<<<< HEAD
             border: 2px solid var(--night-bg);
+=======
+            border: 2px solid #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
 
         .mr-3 {
@@ -330,7 +455,11 @@
         }
 
         .friends-sidebar {
+<<<<<<< HEAD
             background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -360,7 +489,11 @@
         }
 
         .post-card {
+<<<<<<< HEAD
             background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
             border: 1px solid #dddfe2;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -382,7 +515,11 @@
         .post-footer {
             padding: 8px 16px;
             border-top: 1px solid #e4e6eb;
+<<<<<<< HEAD
             background-color: var(--night-bg);
+=======
+            background-color: #f8f9fa;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
 
         .post-user-info {
@@ -393,7 +530,11 @@
 
         .post-user-name {
             font-weight: 600;
+<<<<<<< HEAD
             color: var(--night-text);
+=======
+            color: #050505;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
 
         .post-timestamp {
@@ -404,6 +545,7 @@
         .post-image-container {
             margin-top: 12px;
             text-align: center;
+<<<<<<< HEAD
         }
 
         .post-image {
@@ -493,6 +635,25 @@
 
         .dropdown-item:hover {
             background-color: var(--night-bg);
+=======
+        }
+
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-actions button {
+            padding: 6px 12px;
+            font-size: 0.9em;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -505,6 +666,7 @@
                     <li><h1 style="margin: 0;"><a href="{{ route('dashboard') }}">NewsFeed</a></h1></li>
                     <li><a href="{{ route('profile.show') }}">Profile</a></li>
                     <li><a href="{{ route('profile.posts') }}">My Posts</a></li>
+<<<<<<< HEAD
                     <li class="notification-dropdown">
                         <a href="{{ route('notifications.index') }}" id="notificationDropdown" role="button">
                             <i class="fas fa-bell"></i>
@@ -512,6 +674,8 @@
                         </a>
                     </li>
                     <li><a href="{{ route('friends.index') }}">Friends</a></li>
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
                 </ul>
             </nav>
         </div>
@@ -533,10 +697,17 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
+<<<<<<< HEAD
                                         <label for="media" class="btn btn-outline-primary rounded-circle p-2">
                                             <i class="fas fa-image"></i>
                                         </label>
                                         <input type="file" class="d-none" id="media" name="media" accept="image/*,video/*">
+=======
+                                        <label for="image" class="btn btn-outline-primary rounded-circle p-2">
+                                            <i class="fas fa-image"></i>
+                                        </label>
+                                        <input type="file" class="d-none" id="image" name="image" accept="image/*">
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
                                         <span id="file-chosen" class="ml-2 text-muted"></span>
                                     </div>
                                     <button type="submit" class="btn btn-primary rounded-pill px-4">Post</button>
@@ -566,6 +737,7 @@
                         </div>
                         <div class="post-content">
                             <p>{{ $post->content }}</p>
+<<<<<<< HEAD
                             @if($post->media_path)
                                 @if(Str::startsWith($post->media_type, 'video'))
                                     <video width="100%" controls>
@@ -575,6 +747,12 @@
                                 @else
                                     <img src="{{ asset('storage/' . $post->media_path) }}" alt="Post image" class="img-fluid">
                                 @endif
+=======
+                            @if($post->image_path)
+                                <div class="post-image-container">
+                                    <img src="{{ asset('storage/' . $post->image_path) }}" alt="Post image" class="post-image">
+                                </div>
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
                             @endif
                         </div>
                         <div class="post-footer">
@@ -646,6 +824,7 @@
 
                 <div class="shared-posts">
                     <h2>Shared Posts</h2>
+<<<<<<< HEAD
                     @forelse($sharedPosts as $post)
                         <div class="post-card shared">
                             <div class="post-header">
@@ -686,6 +865,17 @@
                     @empty
                         <p>No shared posts.</p>
                     @endforelse
+=======
+                    @foreach($sharedPosts as $post)
+                        <div class="post shared">
+                            <p>{{ $post->content }}</p>
+                            <small>Originally posted by {{ $post->user->name }} on {{ $post->created_at->format('M d, Y H:i') }}</small>
+                            <small>Shared by you on {{ $post->pivot->created_at->format('M d, Y H:i') }}</small>
+                            
+                            <!-- Like and comment features can be added here if needed -->
+                        </div>
+                    @endforeach
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
                 </div>
             </div>
 
@@ -745,7 +935,11 @@
             });
         }
 
+<<<<<<< HEAD
         const fileInput = document.getElementById('media');
+=======
+        const fileInput = document.getElementById('image');
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         const fileChosen = document.getElementById('file-chosen');
         const imagePreview = document.getElementById('image-preview');
         const previewImage = imagePreview.querySelector('img');
@@ -962,6 +1156,7 @@
                     }
                 }
             });
+<<<<<<< HEAD
 
             // Delete share functionality
             document.querySelectorAll('.delete-share-form').forEach(form => {
@@ -1024,6 +1219,8 @@
                     handleLike(postId, this);
                 });
             });
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
         });
     </script>
 </body>

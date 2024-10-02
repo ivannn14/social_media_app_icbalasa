@@ -1,4 +1,5 @@
 <x-guest-layout>
+<<<<<<< HEAD
     <style>
         html, body, #app, .min-h-screen, .bg-gray-100 {
             background-color: #000 !important;
@@ -74,6 +75,15 @@
             align-items: center;
         }
     </style>
+=======
+    <!-- Logo -->
+    <div class="mb-4 text-center">
+        <img src="{{ asset('image/th.jpg') }}" alt="Logo" class="mx-auto h-20">
+    </div>
+
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
 
     <div class="register-container">
         <div class="ishare-logo">iShare</div>

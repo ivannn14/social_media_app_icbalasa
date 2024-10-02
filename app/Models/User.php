@@ -68,6 +68,7 @@ class User extends Authenticatable
         return $this->background_image ? asset('storage/' . $this->background_image) : asset('default-background.jpg');
     }
 
+<<<<<<< HEAD
     public function getNameAttribute($value)
     {
         return $value ?: 'User ' . $this->id;
@@ -80,6 +81,8 @@ class User extends Authenticatable
             ?? 'Someone';
     }
 
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
     public function posts()
     {
         return $this->hasMany(Post::class);
@@ -87,11 +90,18 @@ class User extends Authenticatable
 
     public function sharedPosts()
     {
+<<<<<<< HEAD
         return $this->belongsToMany(Post::class, 'post_shares', 'user_id', 'post_id')->withTimestamps();
+=======
+        return $this->belongsToMany(Post::class, 'post_shares')
+                    ->withTimestamps()
+                    ->orderByPivot('created_at', 'desc');
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
     }
 
     public function friends()
     {
+<<<<<<< HEAD
         return $this->belongsToMany(User::class, 'friends', 'user_id', 'friend_id')
                     ->withPivot('status')
                     ->withTimestamps();
@@ -109,4 +119,9 @@ class User extends Authenticatable
     // {
     //     return $this->first_name . ' ' . $this->last_name;
     // }
+=======
+        return $this->belongsToMany(User::class, 'friendships', 'user_id', 'friend_id')
+                    ->wherePivot('accepted', true);
+    }
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
 }

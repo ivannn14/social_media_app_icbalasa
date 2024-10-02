@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <style>
     :root {
         --night-bg: #0f172a;  /* Very dark blue, almost black */
@@ -73,6 +74,8 @@
     }
 </style>
 
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -108,3 +111,40 @@
     </div>
 </div>
 @endsection
+<<<<<<< HEAD
+=======
+
+<style>
+    .profile-picture-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-top: -75px; /* Adjust this value to position the profile picture correctly */
+        border: 5px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bio-section {
+        margin-top: 20px;
+    }
+
+    .bio-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .bio-section p {
+        font-size: 1rem;
+        color: #555;
+    }
+</style>
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
