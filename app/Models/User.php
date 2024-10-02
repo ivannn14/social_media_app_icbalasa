@@ -19,8 +19,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile_picture',  // Add this
-        'background_image', // Add this
+        'bio',
+        'profile_picture',
+        'background_picture',
+        // other fillable fields
     ];
 
     /**
@@ -64,5 +66,21 @@ class User extends Authenticatable
     public function getBackgroundImageUrlAttribute()
     {
         return $this->background_image ? asset('storage/' . $this->background_image) : asset('default-background.jpg');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function sharedPosts()
+    {
+        return $this->belongsToMany(Post::class, 'post_shares')->withTimestamps();
+    }
+
+    public function friends()
+    {
+        return $this->belongsToMany(User::class, 'friendships', 'user_id', 'friend_id')
+                    ->wherePivot('accepted', true);
     }
 }
