@@ -1,52 +1,120 @@
 <x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <style>
+        html, body, #app, .min-h-screen, .bg-gray-100 {
+            background-color: #000 !important;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #e7e9ea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .login-container {
+            background-color: #000;
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .ishare-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1da1f2;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #e7e9ea;
+            text-align: center;
+        }
+        input {
+            background-color: #000 !important;
+            border: 1px solid #333 !important;
+            border-radius: 4px !important;
+            color: #e7e9ea !important;
+            padding: 0.75rem !important;
+            width: 100% !important;
+            margin-bottom: 1rem !important;
+        }
+        input:focus {
+            border-color: #1da1f2 !important;
+            box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.3) !important;
+        }
+        .btn-login {
+            background-color: #1d9bf0 !important;
+            color: #fff !important;
+            border: none !important;
+            border-radius: 9999px !important;
+            padding: 0.5rem 1rem !important;
+            font-weight: bold !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s !important;
+        }
+        .btn-login:hover {
+            background-color: #1a91da !important;
+        }
+        .text-blue {
+            color: #1d9bf0 !important;
+            text-decoration: none;
+        }
+        .text-blue:hover {
+            text-decoration: underline !important;
+        }
+        /* Remove any potential white borders or outlines */
+        * {
+            border: none !important;
+            outline: none !important;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 0.5rem;
+            width: auto !important;
+        }
+        .checkbox-container label {
+            color: #fff; /* Changed to white */
+        }
+        .login-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+    </style>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <div class="login-container">
+        <div class="ishare-logo">iShare</div>
+        <h1>Log in to iShare</h1>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus placeholder="Phone, email, or username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
+            <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-between mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <div>
-                <x-primary-button class="ms-3">
-                    {{ __('Log in') }}
-                </x-primary-button>
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-indigo-600 hover:text-indigo-900">
-                    {{ __('Register') }}
-                </a>
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember_me" name="remember">
+                <label for="remember_me">Remember me</label>
             </div>
-        </div>
-    </form>
+
+            <div class="login-actions">
+                <a href="{{ route('password.request') }}" class="text-blue">Forgot password?</a>
+                <button type="submit" class="btn-login">LOG IN</button>
+            </div>
+        </form>
+    </div>
 </x-guest-layout>
