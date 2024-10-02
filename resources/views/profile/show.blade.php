@@ -1,6 +1,84 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<style>
+    :root {
+        --night-bg: #0f172a;  /* Very dark blue, almost black */
+        --night-text: #e2e8f0;  /* Light gray for main text */
+        --night-accent: #38bdf8;  /* Light blue for accents */
+        --night-secondary: #1e293b;  /* Slightly lighter blue for secondary elements */
+    }
+
+    body, .bg-white, .bg-gray-100 {
+        background-color: var(--night-bg) !important;
+        color: var(--night-text) !important;
+    }
+
+    .text-gray-700, .text-gray-800, .text-gray-900 {
+        color: var(--night-text) !important;
+    }
+
+    a, .text-blue-600 {
+        color: var(--night-accent) !important;
+    }
+
+    .card, .bg-white {
+        background-color: var(--night-secondary) !important;
+        border-color: #4a5568 !important;
+    }
+
+    .profile-picture-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-top: -75px;
+        border: 5px solid var(--night-secondary);
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bio-section {
+        margin-top: 20px;
+    }
+
+    .bio-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--night-text);
+    }
+
+    .bio-section p {
+        font-size: 1rem;
+        color: var(--night-text);
+    }
+
+    .btn-primary, .btn-secondary {
+        background-color: var(--night-accent);
+        color: #ffffff !important; /* Changed to white */
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+        background-color: #2980b9; /* Darker shade for hover effect */
+        color: #ffffff !important;
+    }
+</style>
+
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -36,6 +114,11 @@
     </div>
 </div>
 @endsection
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
 
 <style>
     .profile-picture-container {
@@ -70,3 +153,7 @@
         color: #555;
     }
 </style>
+<<<<<<< HEAD
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f

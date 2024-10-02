@@ -7,12 +7,37 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard</title>
     <style>
+<<<<<<< HEAD
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             padding: 0;
             color: #333;
+=======
+<<<<<<< HEAD
+        :root {
+            --night-bg: #0f172a;  /* Very dark blue, almost black */
+            --night-text: #e2e8f0;  /* Light gray for main text */
+            --night-accent: #38bdf8;  /* Light blue for accents */
+            --night-secondary: #1e293b;  /* Slightly lighter blue for secondary elements */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--night-bg);
+            margin: 0;
+            padding: 0;
+            color: var(--night-text);
+=======
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
         .container {
             max-width: 1200px;
@@ -20,7 +45,15 @@
             padding: 20px;
         }
         header {
+<<<<<<< HEAD
             background-color: #ffffff;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-secondary);
+=======
+            background-color: #ffffff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 15px 0;
         }
@@ -33,17 +66,84 @@
             align-items: center;
         }
         nav ul li a {
+<<<<<<< HEAD
             color: #333;
+=======
+<<<<<<< HEAD
+            color: var(--night-text);
+=======
+            color: #333;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
+<<<<<<< HEAD
             color: #007bff;
+=======
+<<<<<<< HEAD
+            color: var(--night-accent);
+=======
+            color: #007bff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
         .profile-header {
             position: relative;
             margin-bottom: 80px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+        .background-picture {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 0 0 8px 8px;
+        }
+        .profile-pic-container {
+            position: absolute;
+            bottom: -60px;
+            left: 30px;
+            z-index: 1;
+        }
+        .profile-pic {
+            width: 168px;
+            height: 168px;
+            border-radius: 50%;
+            border: 6px solid var(--night-bg);
+            object-fit: cover;
+        }
+        .edit-button {
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            background-color: var(--night-accent);
+            color: var(--night-bg);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Add this line to remove underline */
+            display: inline-block; /* Add this line for proper padding */
+        }
+        .edit-button:hover {
+            background-color: var(--night-bg);
+            color: var(--night-accent);
+        }
+        .user-info {
+            background-color: var(--night-secondary);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
         .background-picture {
             width: 100%;
@@ -89,6 +189,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-top: 20px;
         }
+<<<<<<< HEAD
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         .user-name {
             font-size: 2rem;
             font-weight: 700;
@@ -99,7 +203,15 @@
             margin-bottom: 20px;
         }
         .post-form {
+<<<<<<< HEAD
             background-color: #fff;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -111,10 +223,25 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             resize: vertical;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            background-color: var(--night-bg);
+            color: var(--night-text);
+        }
+        .post-form button {
+            background-color: var(--night-accent);
+            color: var(--night-bg);
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
         .post-form button {
             background-color: #1877f2;
             color: #fff;
+<<<<<<< HEAD
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
@@ -125,7 +252,15 @@
             margin-top: 20px;
         }
         .post {
+<<<<<<< HEAD
             background-color: #fff;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -140,13 +275,31 @@
         .like-button {
             background: none;
             border: none;
+<<<<<<< HEAD
             color: #1877f2;
+=======
+<<<<<<< HEAD
+            color: var(--night-accent);
+=======
+            color: #1877f2;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             cursor: pointer;
             font-size: 14px;
             padding: 5px 10px;
             margin-top: 10px;
         }
         .like-button.liked {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            color: red;
+        }
+        .share-button {
+            background-color: #42b72a;
+            color: var(--night-bg);
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             color: #fff;
             background-color: #1877f2;
             border-radius: 4px;
@@ -154,6 +307,10 @@
         .share-button {
             background-color: #42b72a;
             color: #fff;
+<<<<<<< HEAD
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -169,10 +326,25 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             resize: vertical;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            background-color: var(--night-bg);
+            color: var(--night-text);
+        }
+        .comment-form button {
+            background-color: var(--night-accent);
+            color: var(--night-bg);
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
         .comment-form button {
             background-color: #1877f2;
             color: #fff;
+<<<<<<< HEAD
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -183,7 +355,15 @@
             margin-top: 10px;
         }
         .comment {
+<<<<<<< HEAD
             background-color: #f0f2f5;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-bg);
+=======
+            background-color: #f0f2f5;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 10px;
@@ -202,7 +382,15 @@
         }
         .delete-button {
             background-color: #dc3545;
+<<<<<<< HEAD
             color: #fff;
+=======
+<<<<<<< HEAD
+            color: var(--night-bg);
+=======
+            color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border: none;
             padding: 5px 10px;
             border-radius: 4px;
@@ -217,7 +405,15 @@
             max-height: 500px; /* Adjust this value as needed */
             overflow: hidden;
             border-radius: 15px;
+<<<<<<< HEAD
             background-color: #f8f9fa; /* Light gray background for images */
+=======
+<<<<<<< HEAD
+            background-color: var(--night-bg); /* Light gray background for images */
+=======
+            background-color: #f8f9fa; /* Light gray background for images */
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             display: flex;
             justify-content: center;
             align-items: center;
@@ -288,7 +484,15 @@
             height: 40px;
             object-fit: cover;
             border-radius: 50%;
+<<<<<<< HEAD
             border: 2px solid #fff;
+=======
+<<<<<<< HEAD
+            border: 2px solid var(--night-bg);
+=======
+            border: 2px solid #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
@@ -304,7 +508,15 @@
             height: 10px;
             border-radius: 50%;
             background-color: #4CAF50; /* Green dot for 'online' status */
+<<<<<<< HEAD
             border: 2px solid #fff;
+=======
+<<<<<<< HEAD
+            border: 2px solid var(--night-bg);
+=======
+            border: 2px solid #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
 
         .mr-3 {
@@ -320,7 +532,15 @@
         }
 
         .friends-sidebar {
+<<<<<<< HEAD
             background-color: #fff;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -350,7 +570,15 @@
         }
 
         .post-card {
+<<<<<<< HEAD
             background-color: #fff;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-secondary);
+=======
+            background-color: #fff;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
             border: 1px solid #dddfe2;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -372,7 +600,15 @@
         .post-footer {
             padding: 8px 16px;
             border-top: 1px solid #e4e6eb;
+<<<<<<< HEAD
             background-color: #f8f9fa;
+=======
+<<<<<<< HEAD
+            background-color: var(--night-bg);
+=======
+            background-color: #f8f9fa;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
 
         .post-user-info {
@@ -383,7 +619,15 @@
 
         .post-user-name {
             font-weight: 600;
+<<<<<<< HEAD
             color: #050505;
+=======
+<<<<<<< HEAD
+            color: var(--night-text);
+=======
+            color: #050505;
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
 
         .post-timestamp {
@@ -394,6 +638,11 @@
         .post-image-container {
             margin-top: 12px;
             text-align: center;
+<<<<<<< HEAD
+        }
+
+=======
+<<<<<<< HEAD
         }
 
         .post-image {
@@ -442,6 +691,98 @@
         }
 
         .btn-outline-danger:hover {
+            color: var(--night-bg);
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-outline-danger:focus {
+            box-shadow: none;
+        }
+
+        .notification-dropdown {
+            position: relative;
+        }
+
+        .notification-dropdown .fa-bell {
+            font-size: 1.5rem; /* Increase the size of the bell icon */
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -8px; /* Adjust this value as needed */
+            right: -8px; /* Adjust this value as needed */
+            padding: 3px 6px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+            font-size: 0.75rem; /* Adjust the font size of the badge */
+        }
+
+        .dropdown-menu {
+            background-color: var(--night-secondary);
+            border: 1px solid var(--night-accent);
+            max-height: 300px; /* Adjust the height as needed */
+            overflow-y: auto; /* Add scroll if content exceeds max height */
+        }
+
+        .dropdown-item {
+            color: var(--night-text);
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--night-bg);
+=======
+        }
+
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-actions button {
+            padding: 6px 12px;
+            font-size: 0.9em;
+<<<<<<< HEAD
+        }
+
+        .post-video-container {
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .post-video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 0;
+        }
+
+        .delete-share-form {
+            margin-left: auto;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: transparent;
+            background-color: transparent;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .btn-outline-danger:hover {
             color: #fff;
             background-color: #dc3545;
             border-color: #dc3545;
@@ -449,6 +790,9 @@
 
         .btn-outline-danger:focus {
             box-shadow: none;
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -461,6 +805,19 @@
                     <li><h1 style="margin: 0;"><a href="{{ route('dashboard') }}">NewsFeed</a></h1></li>
                     <li><a href="{{ route('profile.show') }}">Profile</a></li>
                     <li><a href="{{ route('profile.posts') }}">My Posts</a></li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <li class="notification-dropdown">
+                        <a href="{{ route('notifications.index') }}" id="notificationDropdown" role="button">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-danger notification-badge" id="notificationCount"></span>
+                        </a>
+                    </li>
+                    <li><a href="{{ route('friends.index') }}">Friends</a></li>
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                 </ul>
             </nav>
         </div>
@@ -482,10 +839,23 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                         <label for="media" class="btn btn-outline-primary rounded-circle p-2">
                                             <i class="fas fa-image"></i>
                                         </label>
                                         <input type="file" class="d-none" id="media" name="media" accept="image/*,video/*">
+<<<<<<< HEAD
+=======
+=======
+                                        <label for="image" class="btn btn-outline-primary rounded-circle p-2">
+                                            <i class="fas fa-image"></i>
+                                        </label>
+                                        <input type="file" class="d-none" id="image" name="image" accept="image/*">
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                         <span id="file-chosen" class="ml-2 text-muted"></span>
                                     </div>
                                     <button type="submit" class="btn btn-primary rounded-pill px-4">Post</button>
@@ -515,10 +885,25 @@
                         </div>
                         <div class="post-content">
                             <p>{{ $post->content }}</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            @if($post->media_path)
+                                @if(Str::startsWith($post->media_type, 'video'))
+                                    <video width="100%" controls>
+                                        <source src="{{ asset('storage/' . $post->media_path) }}" type="{{ $post->media_type }}">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                @else
+                                    <img src="{{ asset('storage/' . $post->media_path) }}" alt="Post image" class="img-fluid">
+                                @endif
+=======
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                             @if($post->image_path)
                                 <div class="post-image-container">
                                     <img src="{{ asset('storage/' . $post->image_path) }}" alt="Post image" class="post-image">
                                 </div>
+<<<<<<< HEAD
                             @elseif($post->video_path)
                                 <div class="post-video-container">
                                     <video controls class="post-video">
@@ -526,6 +911,9 @@
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                             @endif
                         </div>
                         <div class="post-footer">
@@ -597,6 +985,10 @@
 
                 <div class="shared-posts">
                     <h2>Shared Posts</h2>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                     @forelse($sharedPosts as $post)
                         <div class="post-card shared">
                             <div class="post-header">
@@ -613,6 +1005,7 @@
                             </div>
                             <div class="post-content">
                                 <p>{{ $post->content }}</p>
+<<<<<<< HEAD
                                 @if($post->image_path)
                                     <div class="post-image-container">
                                         <img src="{{ asset('storage/' . $post->image_path) }}" alt="Shared post image" class="post-image">
@@ -624,6 +1017,17 @@
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
+=======
+                                @if($post->media_path)
+                                    @if(Str::startsWith($post->media_type, 'video'))
+                                        <video width="100%" controls>
+                                            <source src="{{ asset('storage/' . $post->media_path) }}" type="{{ $post->media_type }}">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    @else
+                                        <img src="{{ asset('storage/' . $post->media_path) }}" alt="Shared post image" class="img-fluid">
+                                    @endif
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                 @endif
                             </div>
                             <div class="post-actions">
@@ -639,6 +1043,20 @@
                     @empty
                         <p>No shared posts.</p>
                     @endforelse
+<<<<<<< HEAD
+=======
+=======
+                    @foreach($sharedPosts as $post)
+                        <div class="post shared">
+                            <p>{{ $post->content }}</p>
+                            <small>Originally posted by {{ $post->user->name }} on {{ $post->created_at->format('M d, Y H:i') }}</small>
+                            <small>Shared by you on {{ $post->pivot->created_at->format('M d, Y H:i') }}</small>
+                            
+                            <!-- Like and comment features can be added here if needed -->
+                        </div>
+                    @endforeach
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                 </div>
             </div>
 
@@ -698,7 +1116,15 @@
             });
         }
 
+<<<<<<< HEAD
         const fileInput = document.getElementById('media');
+=======
+<<<<<<< HEAD
+        const fileInput = document.getElementById('media');
+=======
+        const fileInput = document.getElementById('image');
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         const fileChosen = document.getElementById('file-chosen');
         const imagePreview = document.getElementById('image-preview');
         const previewImage = imagePreview.querySelector('img');
@@ -915,6 +1341,10 @@
                     }
                 }
             });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
 
             // Delete share functionality
             document.querySelectorAll('.delete-share-form').forEach(form => {
@@ -925,6 +1355,63 @@
                     }
                 });
             });
+<<<<<<< HEAD
+=======
+
+            // Function to fetch notifications
+            function fetchNotifications() {
+                fetch('/notifications')
+                    .then(response => response.json())
+                    .then(data => {
+                        const notificationCount = document.getElementById('notificationCount');
+                        
+                        notificationCount.textContent = data.length;
+                    })
+                    .catch(error => console.error('Error fetching notifications:', error));
+            }
+
+            // Fetch notifications every 30 seconds
+            fetchNotifications();
+            setInterval(fetchNotifications, 30000);
+        });
+
+        function handleLike(postId, likeButton) {
+            const isCurrentlyLiked = likeButton.classList.contains('liked');
+            const likeCount = likeButton.querySelector('.like-count');
+
+            console.log('Sending like request', { postId, isCurrentlyLiked });
+
+            fetch(`/posts/${postId}/like`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ liked: !isCurrentlyLiked })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Received response', data);
+                if (data.success) {
+                    likeButton.classList.toggle('liked', data.is_liked);
+                    likeCount.textContent = data.likes_count;
+                    console.log('Updated like button', { isLiked: data.is_liked, likesCount: data.likes_count });
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Add event listeners to all like buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.like-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const postId = this.dataset.postId;
+                    handleLike(postId, this);
+                });
+            });
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
         });
     </script>
 </body>

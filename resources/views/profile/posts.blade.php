@@ -18,11 +18,20 @@
                                     <p class="card-text">{{ $post->content }}</p>
                                     @if($post->image_path)
                                         <img src="{{ asset('storage/' . $post->image_path) }}" alt="Post image" class="img-fluid mb-2 rounded">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                     @elseif($post->video_path)
                                         <video controls class="img-fluid mb-2 rounded">
                                             <source src="{{ asset('storage/' . $post->video_path) }}" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                     @endif
                                 </div>
                                 <div class="card-footer text-muted">
@@ -50,11 +59,20 @@
                                     <p class="card-text">{{ $sharedPost->content }}</p>
                                     @if($sharedPost->image_path)
                                         <img src="{{ asset('storage/' . $sharedPost->image_path) }}" alt="Post image" class="img-fluid mb-2 rounded">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                     @elseif($sharedPost->video_path)
                                         <video controls class="img-fluid mb-2 rounded">
                                             <source src="{{ asset('storage/' . $sharedPost->video_path) }}" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b00352a402cdd61f12da4089a579b6c5760e7845
+>>>>>>> 911081c18f8f2c16e2107738bb94388fd0bf114f
                                     @endif
                                     <p class="card-text">
                                         <small class="text-muted">Originally posted by {{ $sharedPost->user->name }} on {{ $sharedPost->created_at->format('M d, Y H:i') }}</small>
