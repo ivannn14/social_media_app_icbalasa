@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -33,35 +34,31 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-    public function update(Request $request): RedirectResponse
+    public function update(Request $request)
     {
-        // Validate the form input
         $request->validate([
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'profile_picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'background_picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'bio' => 'nullable|string|max:1000',
+            'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'background_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $user = auth()->user();
-
-        // Update user details
-        $user->name = $request->input('username');
+        $user->name = $request->input('name');
         $user->email = $request->input('email');
+        $user->bio = $request->input('bio');
 
-        // Handle profile picture upload
         if ($request->hasFile('profile_picture')) {
-            $path = $request->file('profile_picture')->store('profile_pictures', 'public');
-            $user->profile_picture = $path;
+            $profilePicturePath = $request->file('profile_picture')->store('profile_pictures', 'public');
+            $user->profile_picture = $profilePicturePath;
         }
 
-        // Handle background picture upload
         if ($request->hasFile('background_picture')) {
-            $path = $request->file('background_picture')->store('background_images', 'public');
-            $user->background_picture = $path;
+            $backgroundPicturePath = $request->file('background_picture')->store('background_pictures', 'public');
+            $user->background_picture = $backgroundPicturePath;
         }
 
-        // Save the user data
         $user->save();
 
         return redirect()->route('profile.show')->with('success', 'Profile updated successfully.');
@@ -88,5 +85,14 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    public function posts()
+    {
+        $user = auth()->user();
+        $posts = $user->posts()->latest()->get();
+        $sharedPosts = $user->sharedPosts()->with('user')->latest()->get();
+
+        return view('profile.posts', compact('posts', 'sharedPosts'));
     }
 }

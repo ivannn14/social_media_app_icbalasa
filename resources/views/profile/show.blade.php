@@ -1,33 +1,110 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('User Profile') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Profile Background Image -->
-            <div class="relative">
-                <img src="{{ $user->background_image_url }}" alt="Background Image" class="w-full h-48 object-cover rounded-t-lg">
-                
-                <!-- Profile Picture -->
-                <div class="absolute inset-x-0 bottom-0 transform -translate-y-1/2 flex justify-center">
-                    <img src="{{ $user->profile_picture_url }}" alt="Profile Picture" class="w-32 h-32 object-cover rounded-full border-4 border-white">
+@section('content')
+<style>
+    :root {
+        --night-bg: #0f172a;  /* Very dark blue, almost black */
+        --night-text: #e2e8f0;  /* Light gray for main text */
+        --night-accent: #38bdf8;  /* Light blue for accents */
+        --night-secondary: #1e293b;  /* Slightly lighter blue for secondary elements */
+    }
+
+    body, .bg-white, .bg-gray-100 {
+        background-color: var(--night-bg) !important;
+        color: var(--night-text) !important;
+    }
+
+    .text-gray-700, .text-gray-800, .text-gray-900 {
+        color: var(--night-text) !important;
+    }
+
+    a, .text-blue-600 {
+        color: var(--night-accent) !important;
+    }
+
+    .card, .bg-white {
+        background-color: var(--night-secondary) !important;
+        border-color: #4a5568 !important;
+    }
+
+    .profile-picture-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-top: -75px;
+        border: 5px solid var(--night-secondary);
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bio-section {
+        margin-top: 20px;
+    }
+
+    .bio-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--night-text);
+    }
+
+    .bio-section p {
+        font-size: 1rem;
+        color: var(--night-text);
+    }
+
+    .btn-primary, .btn-secondary {
+        background-color: var(--night-accent);
+        color: #ffffff !important; /* Changed to white */
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+        background-color: #2980b9; /* Darker shade for hover effect */
+        color: #ffffff !important;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <!-- Profile Background Image -->
+                <div class="relative">
+                    <div class="w-full h-80 overflow-hidden rounded-t-lg">
+                        <img src="{{ asset('storage/' . $user->background_picture) }}" alt="Background Image" class="w-full h-full object-cover">
+                    </div> 
                 </div>
-            </div>
-            
-            <!-- User Information -->
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-20">
-                <div class="p-6 text-gray-900">
-                    <div class="flex items-center space-x-4">
-                        <div class="text-lg font-semibold">{{ $user->name }}</div>
+
+                <div class="card-body text-center">
+                    @if($user->profile_picture)
+                        <div class="profile-picture-container">
+                            <img src="{{ asset('storage/' . $user->profile_picture) }}" alt="Profile Picture" class="profile-picture">
+                        </div>
+                    @endif
+                    <h2>{{ $user->name }}</h2>
+                    <p>{{ $user->email }}</p>
+                    <div class="bio-section">
+                        <h3>Bio</h3>
+                        <p>{{ $user->bio }}</p>
                     </div>
-                    <div class="mt-4">
-                        <p class="text-gray-600">{{ $user->email }}</p>
+                    <div class="text-center mt-4">
+                        <a href="{{ route('profile.edit') }}" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a href="{{ route('dashboard') }}" class="btn btn-secondary">Home</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>
+@endsection

@@ -19,8 +19,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile_picture',  // Add this
-        'background_image', // Add this
+        'bio',
+        'profile_picture',
+        'background_picture',
+        // other fillable fields
     ];
 
     /**
@@ -64,5 +66,54 @@ class User extends Authenticatable
     public function getBackgroundImageUrlAttribute()
     {
         return $this->background_image ? asset('storage/' . $this->background_image) : asset('default-background.jpg');
+    }
+
+    public function getNameAttribute($value)
+    {
+        return $value ?: 'User ' . $this->id;
+    }
+
+    public function getNameForNotification($notification)
+    {
+        return $notification->data['liker_name'] 
+            ?? User::find($notification->data['liker_id'])->name 
+            ?? 'Someone';
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function sharedPosts()
+    {
+        return $this->belongsToMany(Post::class, 'post_shares', 'user_id', 'post_id')->withTimestamps();
+    }
+
+    public function friends()
+    {
+        return $this->belongsToMany(User::class, 'friends', 'user_id', 'friend_id')
+                    ->withPivot('status')
+                    ->withTimestamps();
+    }
+
+    public function friendRequests()
+    {
+        return $this->belongsToMany(User::class, 'friends', 'friend_id', 'user_id')
+                    ->wherePivot('status', 'pending')
+                    ->withTimestamps();
+    }
+
+    // Remove this method as it's redundant
+    // public function getFullNameAttribute()
+    // {
+    //     return $this->first_name . ' ' . $this->last_name;
+    // }
+
+    public function unreadMessagesCount()
+    {
+        return $this->hasMany(Message::class, 'recipient_id')
+            ->whereNull('read_at')
+            ->count();
     }
 }

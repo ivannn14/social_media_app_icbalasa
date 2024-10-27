@@ -170,4 +170,9 @@ return [
 
     ],
 
+    'notifications' => [
+        'table_name' => 'notifications',
+        'expires' => null,
+    ],
+
 ];
